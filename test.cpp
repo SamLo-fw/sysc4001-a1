@@ -1,8 +1,16 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include <vector>
+
+struct Instruction{
+    char* name;
+    int timespan;
+};
 
 int main(int argc, char **argv){
+
+    std::vector<Instruction> execute_table; 
 
     //exit the program if no trace file provided
     if(argc < 2){
@@ -32,7 +40,7 @@ int main(int argc, char **argv){
     //write output
     FILE *optr;
     printf("trying to write output file");
-    if(optr = fopen(".\\execution1.txt", "w")){
+    if((optr = fopen(".\\execution1.txt", "w")) == NULL){
         perror("could not open output file.");
         return 1;
     }

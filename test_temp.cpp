@@ -4,6 +4,7 @@
 #include <vector>
 #include <fstream>
 #include <iostream>
+#include <string>
 
 struct Instruction{
     char* full_name;
@@ -12,7 +13,6 @@ struct Instruction{
 };
 
 int main(int argc, char **argv){
-
     std::vector<Instruction> execute_table;
     std::vector<std::string> fileLines;
     std::string line;
@@ -91,6 +91,6 @@ int main(int argc, char **argv){
     file.close();
     //free mallocs before return
     free(furl_full);
-
+    
     return 0;
 }

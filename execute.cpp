@@ -1,16 +1,4 @@
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-#include <vector>
-#include <fstream>
-#include <iostream>
-#include <string>
-
-struct Instruction{
-    std::string full_name;
-    int timespan;
-    int isr_num;
-};
+#include "execute.hpp"
 
 std::string istr_string_setup(int counter, int timespan){
     return std::to_string(counter) + ", " + std::to_string(timespan) + ", ";
